@@ -139,41 +139,47 @@ export default function App() {
       key: 'goaf',
       title: 'Goaf AZ',
       desc: 'Online gaming marketplace / gaming top-up website.',
-      tech: ['React', 'Next.js', 'Laravel'],
+      tech: ['Nuxt.js', 'Laravel'],
       gradient: 'from-cyan-400 to-blue-600',
-      image: '/projects/goaf.jpg',
+      image: '/projects/goafaznewnew.png',
+      url: 'https://goafaz.com/',
     },
     {
       key: 'umud',
       title: 'Umud Rs',
       desc: 'Corporate Website built with modern technologies.',
-      tech: ['HTML', 'CSS', 'PHP'],
+      tech: ['HTML', 'CSS', 'JS'],
       gradient: 'from-blue-400 to-purple-600',
-      image: '/projects/umud.jpg',
+      image: '/projects/umudrs.png',
+      url: 'https://umudrs.az/',
+
     },
     {
       key: 'caffecino',
       title: 'CAFFECINO AZ',
       desc: 'Coffee Shop Website with elegant UI and menu display.',
-      tech: ['React', 'Tailwindcss', 'Laravel'],
+      tech: ['React', 'Tailwindcss', 'Node.js'],
       gradient: 'from-amber-400 to-orange-600',
-      image: '/projects/caffecino.jpg',
+      image: '/projects/caffecino.png',
+      url: 'https://caffecino.az/',
     },
     {
       key: 'superfon',
       title: 'SUPERFON',
       desc: 'E-commerce Website for electronics and gadgets.',
-      tech: ['Next.js', 'MySQL', 'Rest API'],
+      tech: ['React',  'Rest API'],
       gradient: 'from-green-400 to-cyan-600',
-      image: '/projects/superfon.jpg',
+      image: '/projects/superfon.png',
+      url: 'https://superfon-rho.vercel.app/',
     },
     {
       key: 'parkcinema',
       title: 'PARK CINEMA',
       desc: 'Cinema Ticketing & Event Platform with seat booking system.',
-      tech: ['React', 'Laravel', 'MySQL'],
+      tech: ['HTML', 'CSS', 'JavaScript'],
       gradient: 'from-red-400 to-pink-600',
-      image: '/projects/parkcinema.jpg',
+      image: '/projects/parkcinema.png',
+      url: 'https://park-cinema-chi.vercel.app/',
     },
     {
       key: 'sitequanta',
@@ -187,9 +193,10 @@ export default function App() {
       key: 'dolphgame',
       title: 'DolphGame',
       desc: 'Online gaming marketplace / gaming top-up website.',
-      tech: ['React', 'Next.js', 'Laravel'],
+      tech: [ 'Nuxt.js', 'Laravel'],
       gradient: 'from-teal-400 to-blue-600',
-      image: '/projects/dolphgame.jpg',
+      image: '/projects/dolphnew.png',
+      url: 'https://dolphgame.vercel.app/payments/online',
     },
   ]
 
@@ -407,7 +414,7 @@ export default function App() {
 
               {/* ── VIEW CV BUTTON ── */}
               <motion.a
-                href="/cv.pdf"
+                href="public/projects/cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-xl shadow-lg shadow-purple-500/40 hover:shadow-purple-500/60 transition-all text-sm flex items-center gap-2"
@@ -457,7 +464,7 @@ export default function App() {
               {/* YOUR PHOTO — put me.jpg in /public/ */}
               <img
                 id="hero-photo"
-                src="/me.jpg"
+                src="/public/projects/menimki1.png"
                 alt="Ravan Guliyev"
                 className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover rounded-full border-4 border-slate-950 shadow-2xl"
                 onError={(e) => {
@@ -814,7 +821,7 @@ export default function App() {
                       {project.title}
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 flex-grow">{project.desc}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((t, i) => (
                         <span
                           key={i}
@@ -824,6 +831,22 @@ export default function App() {
                         </span>
                       ))}
                     </div>
+                    {project.url && (
+                      <motion.a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-bold text-xs rounded-lg shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all w-fit"
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Visit Site
+                      </motion.a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -893,7 +916,7 @@ export default function App() {
             </motion.a>
 
             <motion.a
-              href="tel:+994051653 0202"
+              href="https://wa.me/+994516530202"
               className="flex items-center justify-center gap-3 w-full px-8 py-4 border-2 border-cyan-400/60 text-cyan-400 font-bold text-base rounded-xl hover:bg-cyan-400/10 transition-all"
               whileHover={{ scale: 1.03, y: -4 }}
               whileTap={{ scale: 0.97 }}
@@ -912,7 +935,7 @@ export default function App() {
             >
               {[
                 { label: 'GitHub',   url: 'https://github.com/RavanGuliev', color: 'from-slate-600 to-slate-800' },
-                { label: 'LinkedIn', url: '#',                              color: 'from-blue-600 to-blue-800'  },
+                { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ravanguliev/',  color: 'from-blue-600 to-blue-800'  },
               ].map((social, idx) => (
                 <motion.a
                   key={idx}
