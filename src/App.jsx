@@ -4,11 +4,10 @@ import { motion } from 'framer-motion'
 export default function App() {
   const [activeNav, setActiveNav] = useState('home')
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [isScrolling, setIsScrolling] = useState(false)
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e clientY })
+      setMousePosition({ x: e.clientX, y: e.clientY })
     }
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
