@@ -460,10 +460,9 @@ export default function App() {
               {/* Gradient border */}
               <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600" />
 
-              {/* YOUR PHOTO — put me.jpg in /public/ */}
               <img
                 id="hero-photo"
-                src="/public/projects/menimki1.png"
+                src="/public/projects/menimki2.png"
                 alt="Ravan Guliyev"
                 className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover rounded-full border-4 border-slate-950 shadow-2xl"
                 onError={(e) => {
