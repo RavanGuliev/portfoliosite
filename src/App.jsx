@@ -412,7 +412,6 @@ export default function App() {
                 View My Work
               </motion.button>
 
-              {/* ── VIEW CV BUTTON ── */}
               <motion.a
                 href="public/projects/cv.pdf"
                 target="_blank"
