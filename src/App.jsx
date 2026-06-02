@@ -472,14 +472,14 @@ export default function App() {
               />
 
               {/* Fallback shown if /public/me.jpg not found */}
-              {/* <div
+            <div
                 id="hero-photo-fallback"
                 style={{ display: 'none' }}
                 className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-4 border-slate-950 bg-slate-900 items-center justify-center flex-col gap-2"
               >
                 <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">RG</span>
                 <span className="text-gray-500 text-xs">Add me.jpg to /public/</span>
-              </div> */}
+              </div> 
             </motion.div>
           </motion.div>
         </div>
